@@ -14,7 +14,7 @@ RUN DEBIAN_FRONTEND=noninteractive && \
 	mkdir -p /soft/ && \
 	#
 	cd /soft/ && \
-	git clone https://github.com/nikic/php-ast.git php-ast --depth=1 && \
+	git clone https://github.com/nikic/php-ast.git php-ast  && \
 	cd php-ast/ && \
 	git checkout ${PHP_AST} && \
 	phpize  && \
@@ -26,7 +26,7 @@ RUN DEBIAN_FRONTEND=noninteractive && \
 	ln -s /etc/php/${PHP_VERSION}/mods-available/ast.ini /etc/php/${PHP_VERSION}/fpm/conf.d/20-ast.ini && \
 	#
 	cd /soft/ && \
-	git clone https://github.com/krakjoe/uopz.git uopz --depth=1  && \
+	git clone https://github.com/krakjoe/uopz.git uopz  && \
 	cd uopz/ && \
 	git checkout ${PHP_UOPZ} && \
 	phpize && \
