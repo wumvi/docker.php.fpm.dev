@@ -37,8 +37,8 @@ RUN DEBIAN_FRONTEND=noninteractive && \
 	ln -s /etc/php/${PHP_VERSION}/mods-available/uopz.ini /etc/php/${PHP_VERSION}/cli/conf.d/05-uopz.ini && \
 	ln -s /etc/php/${PHP_VERSION}/mods-available/uopz.ini /etc/php/${PHP_VERSION}/fpm/conf.d/05-uopz.ini && \
 	#
-	sed -i 's/display_errors = Off/display_errors = On/' /etc/php/$PHP_VERSION/fpm/php.ini \
-	sed -i 's/error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT/error_reporting = E_ALL/' /etc/php/$PHP_VERSION/fpm/php.ini \
+	sed -i 's/display_errors = Off/display_errors = On/' /etc/php/$PHP_VERSION/fpm/php.ini && \
+	sed -i 's/error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT/error_reporting = E_ALL/' /etc/php/$PHP_VERSION/fpm/php.ini && \
 	#
 	apt-get -y remove build-essential cmake php${PHP_VERSION}-dev && \
 	apt-get -y autoremove && \
