@@ -1,7 +1,7 @@
 FROM wumvi/php.fpm.prod:7.1
 MAINTAINER Vitaliy Kozlenko <vk@wumvi.com>
 
-LABEL version="1.0" php="7.1" mode="dev"
+LABEL version="1.1" php="7.1" mode="dev"
 
 ENV RUN_MODE DEV
 ENV PHP_AST v0.1.6
